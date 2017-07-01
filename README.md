@@ -1,13 +1,14 @@
-rpi-discordnet-docker
+# rpi-discordnet-docker
 
 Raspberry Pi向けの[Discord.Net](https://github.com/RogueException/Discord.Net)ランタイムです。
 
+[kokeiro001/rpi-discordnet - Docker Hub](https://hub.docker.com/r/kokeiro001/rpi-discordnet/)
 
 ## 使用方法
 
 ### ホストPCに配置したボットのビルドを利用する方法
 
-予めボットをビルドしておいたデータを任意のディレクトリ(例:```/home/pi/YourBot/```)に配置し、次のようなコマンドで起動できます。
+予めボットをビルドしておいたデータを任意のディレクトリ(例:```/home/pi/YourBotDir/```)に配置し、次のようなコマンドで起動できます。
 
 ```
 $ docker run -v /home/pi/<YourBotDir>/:/app -e "BotUserToken=<your bot token>" kokeiro001/rpi-discordnet:1.0.0rc-runtime dotnet YourBot.dll 
